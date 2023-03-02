@@ -5,14 +5,17 @@ using namespace std;
 int main()
 {
 
+    cout << "The program is needed to convert UAH in other currency (dollars, euros, rubles)" << endl;
+    cout << "For the calculation, you need to enter amount of hryvnia and and convert type.\n" << endl;
+
     float UAH_to_convert = 0;
     int operation;
 
-    cout << "\nEnter the amount of hryvnia to convert: ";
+    cout << "Enter the amount of hryvnia to convert: ";
     cin >> UAH_to_convert;
     cout << endl;
 
-    cout << "\nChoose convert operation (1 - to dollars, 2 - to euros, 3 - to rubles): ";
+    cout << "Choose convert operation (1 - to dollars, 2 - to euros, 3 - to rubles): ";
     cin >> operation;
     cout << endl;
 
