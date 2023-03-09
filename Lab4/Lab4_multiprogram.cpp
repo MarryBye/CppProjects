@@ -130,11 +130,12 @@ int main() {
             }
 
             while (divider >= 1) {
-                cout << r / divider << endl;
-                cout << r % divider << endl;
+                chars++;
                 r = r % divider;
                 divider /= 10;
             }
+
+            cout << chars << endl;
 
             break;
         default:
