@@ -85,7 +85,6 @@ int main() {
                     "   нацело на 11, 9." << endl;
 
             int n;
-            float ans_n_1, ans_n_2;
 
             cout << "Enter n: ";
             cin >> n;
