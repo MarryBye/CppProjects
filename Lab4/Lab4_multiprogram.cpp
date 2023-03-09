@@ -106,6 +106,21 @@ int main() {
         case 4:
             cout << "Определить количество знаков в натуральном числе от 0 до 1000." << endl;
 
+            int r;
+
+            cout << "Enter r: ";
+            cin >> r;
+            cout << endl;
+
+            while (r < 0 || r > 1000) {
+                cout << "r must be: 0 < r < 1000 !!!" << endl;
+                cout << "Enter r: ";
+                cin >> r;
+                cout << endl;
+            }
+
+
+
             break;
         default:
             cout << "No option " << option << endl;
