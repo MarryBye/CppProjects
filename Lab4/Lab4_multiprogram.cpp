@@ -117,12 +117,8 @@ int main() {
 
             divider = 1;
 
-            while (true) {
-                if (divider * 10 < r) {
-                    divider *= 10;
-                } else {
-                    break;
-                }
+            while (divider * 10 < r) {
+                divider *= 10;
             }
 
             while (divider >= 1) {
