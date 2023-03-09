@@ -119,9 +119,17 @@ int main() {
                 cout << endl;
             }
 
-            divider = 1000;
+            divider = 1;
 
-            while (divider >= 10) {
+            while (true) {
+                if (divider * 10 < r) {
+                    divider *= 10;
+                } else {
+                    break;
+                }
+            }
+
+            while (divider >= 1) {
                 cout << r / divider << endl;
                 cout << r % divider << endl;
                 r = r % divider;
