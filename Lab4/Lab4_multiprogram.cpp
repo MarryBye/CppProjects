@@ -135,7 +135,7 @@ int main() {
                 divider /= 10;
             }
 
-            cout << chars << endl;
+            cout << "Number of chars: " << chars << endl;
 
             break;
         default:
