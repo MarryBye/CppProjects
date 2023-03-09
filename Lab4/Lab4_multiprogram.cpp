@@ -106,7 +106,7 @@ int main() {
         case 4:
             cout << "Определить количество знаков в натуральном числе от 0 до 1000." << endl;
 
-            int r;
+            int r, chars, divider;
 
             cout << "Enter r: ";
             cin >> r;
@@ -119,7 +119,14 @@ int main() {
                 cout << endl;
             }
 
+            divider = 1000;
 
+            while (divider >= 10) {
+                cout << r / divider << endl;
+                cout << r % divider << endl;
+                r = r % divider;
+                divider /= 10;
+            }
 
             break;
         default:
