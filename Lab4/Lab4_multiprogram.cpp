@@ -91,14 +91,11 @@ int main() {
             cin >> n;
             cout << endl;
 
-            ans_n_1 = n / 11.0f;
-            ans_n_2 = n / 9.0f;
-
-            cout << n << " / " << "11 = " << ans_n_1 << endl;
+            cout << n << " / " << "11 = " << n / 11.0f << endl;
             (n % 11 == 0) ? cout << "Yes" : cout << "No";
             cout << endl;
 
-            cout << n << " / " << "9 = " << ans_n_2 << endl;
+            cout << n << " / " << "9 = " << n / 9.0f << endl;
             (n % 9 == 0) ? cout << "Yes" : cout << "No";
             cout << endl;
 
