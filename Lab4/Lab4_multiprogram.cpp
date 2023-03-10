@@ -115,17 +115,69 @@ int main() {
                 cout << endl;
             }
 
-            divider = 1;
+//  Универсальный вариант ерез циклы, без циклов программа ниже, но без циклов как по мне она бесполезная и не имеет
+//  смысла поскольку мы знаем что у нас число будет только от 0 до 1000 и использовать счетчик тут нет смысла.
+//  Вариант с циклами ниже работает с любыми числами, не только от 0 до 1000.
 
-            while (divider * 10 < r) {
-                divider *= 10;
+            divider = 1; // изначально делитель это 1
+
+            while (divider * 10 <= r) { // получаем нужный делитель, он должен быть меньше или равен нашему числу, но
+                divider *= 10;          // при следующем умножении больше, перед ним цикл и оборвется
             }
 
-            while (divider >= 1) {
-                chars++;
+            while (divider >= 1) {      // добавляем в кол-ву цифр +1, делим по модулю число чтобы отрезать первую цифру
+                chars++;                // далее уменьшаем делитель в 10 раз
                 r = r % divider;
                 divider /= 10;
             }
+
+//             if (r >= 0 && r < 10) {
+//                 chars = 1;
+//             } else if (r >= 10 && r < 100) {
+//                 chars = 2;
+//             } else if (r >= 100 && r < 1000) {
+//                 chars = 3;
+//             } else {
+//                 chars = 4;
+//             }
+
+//            if (r % 1000 != r) {
+//                divider = 1000;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//            } else if (r % 100 != r) {
+//                divider = 100;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//            } else if (r % 10 != r) {
+//                divider = 10;
+//                chars++;
+//                r = r % divider;
+//                divider /= 10;
+//                chars++;
+//                r = r % divider;
+//            } else {
+//                divider = 1;
+//                chars++;
+//                r = r % divider;
+//            }
 
             cout << "Number of chars: " << chars << endl;
 
