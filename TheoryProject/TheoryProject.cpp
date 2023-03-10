@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 
 using namespace std;
 
@@ -41,6 +42,9 @@ void theoryFormula(int x) {
 }
 
 int main() {
+
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
 
     int checkTo = 1;
 

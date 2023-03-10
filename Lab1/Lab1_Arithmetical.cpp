@@ -1,24 +1,27 @@
 #include <iostream>
 #include <cmath>
+#include <Windows.h>
 
 using namespace std;
 
-int main()
-{
+int main() {
 
-    cout << "The program is needed to calculate the value of an equation with numbers that the user enters." << endl;
-    cout << "For the calculation, you need to enter 2 numbers x and y.." << endl;
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    cout << "Программа нужна для рассчета результата уравнения." << endl;
+    cout << "Для рассчета вам необходимо ввести числа x и y." << endl;
 
     cout << "10: z = (2cos(x - pi / 6) / 0.5 + sin^2y)* (1 + x^2 / 3 - y^2 / 5))\n" << endl;
 
     float x = 0;
     float y = 0;
 
-    cout << "Enter X: ";
+    cout << "Введите X: ";
     cin >> x;
     cout << endl;
 
-    cout << "Enter Y: ";
+    cout << "Введите Y: ";
     cin >> y;
     cout << endl;
 
@@ -29,7 +32,7 @@ int main()
 
     float result = result_1 / result_2 * (1 + result_3 / result_4);
 
-    cout << "Result is: " << result << endl;
+    cout << "Ответ: " << result << endl;
 
     system("pause");
     return 0;

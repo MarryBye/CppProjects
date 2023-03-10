@@ -1,27 +1,31 @@
 #include <iostream>
+#include <Windows.h>
 
 using namespace std;
 
 int main() {
 
-    cout << "ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñƒ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð±ÑƒÐ´ÐµÑ‚\n"
-            "Ð²Ð¾Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÑŒ Ñ‡Ð¸ÑÐ»Ð¾ x Ð² ÑÑ‚ÐµÐ¿ÐµÐ½ÑŒ y, Ð²Ð²Ð¾Ð´Ð¸Ð¼Ñ‹Ðµ Ñ\n"
-            "ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹,\n"
-            "Ð±ÐµÐ· Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ð½Ð¸Ñ ÑÑ‚Ð°Ð½Ð´Ð°Ñ€Ñ‚Ð½Ð¾Ð¹ Ñ„ÑƒÐ½ÐºÑ†Ð¸Ð¸ pow()." << endl;
+    SetConsoleCP(1251);
+    SetConsoleOutputCP(1251);
+
+    cout << "Íàïèñàòü ïðîãðàììó, êîòîðàÿ áóäåò\n"
+            "âîçâîäèòü ÷èñëî x â ñòåïåíü y, ââîäèìûå ñ\n"
+            "êëàâèàòóðû,\n"
+            "áåç èñïîëüçîâàíèÿ ñòàíäàðòíîé ôóíêöèè pow()." << endl;
 
     int x, y, i;
     int ans = 1;
 
-    cout << "Input x: ";
+    cout << "Ââåäèòå x: ";
     cin >> x;
     cout << endl;
 
-    cout << "Input y: ";
+    cout << "Ââåäèòå y: ";
     cin >> y;
     cout << endl;
 
     if (x == 0 && y == 0) {
-        cout << "The expression is meaningless" << endl;
+        cout << "Îïåðàöèÿ áåññìûñëåííà!" << endl;
     } else {
         for (i = 0; i < y; i++) {
             ans *= x;
