@@ -8,7 +8,7 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
 
-    cout << "Êó" << endl;
+    cout << "Êó1" << endl;
 
     system("pause");
     return 0;
